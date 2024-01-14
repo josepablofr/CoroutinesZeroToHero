@@ -38,18 +38,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun waitForCoroutines(){    // Esta función nos sirve para lanzar una Corrutina en el hilo secundario pero cuando necesitamos que se
-        //termine para poder continuar en el hilo princiapal
+        //termine para poder continuar en el hilo principal
         lifecycleScope.launch(Dispatchers.IO){
-            val deferred1 = async { retrofit.getSuperheroes("a") }  // con esto lo volvemos tipo deferred
-            val deferred2 = async { retrofit.getSuperheroes("b") }
-            val deferred3 = async { retrofit.getSuperheroes("c") }
-            val deferred4 = async { retrofit.getSuperheroes("d") }
+    //        val deferred1 = async { retrofit.getSuperheroes("a") }  // con esto lo volvemos tipo deferred
+    //        val deferred2 = async { retrofit.getSuperheroes("b") }
+    //        val deferred3 = async { retrofit.getSuperheroes("c") }
+    //        val deferred4 = async { retrofit.getSuperheroes("d") }
 
-            val response = deferred1.await()  // con esto bloquemos que no termine hasta que haya terminado el deferred1
-            val response2 = deferred2.await()
-            val response3 = deferred3.await()
-            val response4 = deferred4.await()
-
+    //        val response = deferred1.await()  // con esto bloquemos que no termine hasta que haya terminado el deferred1
+    //        val response2 = deferred2.await()
+    //        val response3 = deferred3.await()
+    //        val response4 = deferred4.await()
+    //
 
             
             // Ahora en caso de que fueran 50 variables, mejor hacemos una lista:
